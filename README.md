@@ -1,6 +1,7 @@
 # Run Ubuntu & Centos:
 * Download script monitoring.sh
-``` chmod +x monitoring.sh 
+``` 
+chmod +x monitoring.sh 
 ```
 ```
 ./monitoring.sh 
