@@ -1,7 +1,10 @@
 # Run Ubuntu & Centos:
 * Download script monitoring.sh
-* chmod +x monitoring.sh
-* ./monitoring.sh
+``` chmod +x monitoring.sh 
+```
+```
+./monitoring.sh 
+```
 
 # Description:
 Script monitoring.sh shows information about your operation system, when run without keys.
@@ -17,8 +20,12 @@ When use keys see # DESCRIPTION
 
 # Create Docker image:
 
-* mkdir monitoring
-* vi Docerfile
+```
+mkdir monitoring
+```
+```
+vi Docerfile
+```
 ```
 FROM ubuntu:17.10
 MAINTAINER your_email@example.com
@@ -29,8 +36,14 @@ COPY logic.sh /logic.sh
 CMD ["./logic.sh"]
 ```
 * Copy script monitoring.sh from git to folder monitoring
-* chmod +x monitoring.sh
-* docker build -t monitoring_image .
+``` 
+chmod +x monitoring.sh
+```
+```
+docker build -t monitoring_image .
+```
 After finished build, run next command for start monitoring script:
-* docker run -it --rm monitoring /bin/bash -c "/logic.sh"
+```
+docker run -it --rm monitoring /bin/bash -c "/logic.sh"
+```
 Use the keys listed above for shows information about cpu or ram.
