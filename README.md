@@ -33,8 +33,8 @@ MAINTAINER your_email@example.com
 
 RUN apt update && apt upgrade -y && apt install sysstat -y
 
-COPY logic.sh /logic.sh
-CMD ["./logic.sh"]
+COPY logic.sh /monitoring.sh
+CMD ["./monitoring.sh"]
 ```
 * Copy script monitoring.sh from git to folder monitoring
 ``` 
@@ -45,6 +45,6 @@ docker build -t monitoring_image .
 ```
 After finished build, run next command for start monitoring script:
 ```
-docker run -it --rm monitoring /bin/bash -c "/logic.sh"
+docker run -it --rm monitoring_image /bin/bash -c "/monitoring.sh"
 ```
 Use the keys listed above for shows information about cpu or ram.
