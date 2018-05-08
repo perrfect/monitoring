@@ -1,3 +1,5 @@
 # Installation Ubuntu:
-apt update && apt install sysstat
-chmod +x monitoring.sh
+chmod +x monitoring.sh.
+
+# Installation Centos:
+chmod +x monitoring.sh.
