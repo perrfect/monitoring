@@ -9,8 +9,8 @@ When use keys see # DESCRIPTION
 
 # DESCRIPTION:
 * --h
-    * show information about the monitoring script
+    * shows information about the monitoring script
 * --cpu
-    * show information about use cpu resource
+    * shows information about use cpu resources
 * --memory
-    * show information about use memory and swap resource
+    * shows information about use memory and swap resources
