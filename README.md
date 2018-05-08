@@ -14,3 +14,23 @@ When use keys see # DESCRIPTION
     * shows information about use cpu resources
 * --memory
     * shows information about use memory and swap resources
+
+# Create Docker image
+
+* mkdir monitoring
+vi Docerfile
+```
+FROM ubuntu:17.10
+MAINTAINER your_email@example.com
+
+RUN apt update && apt upgrade -y && apt install sysstat -y
+
+COPY logic.sh /logic.sh
+CMD ["./logic.sh"]
+```
+* Copy script monitoring.sh from git to folder monitoring
+* chmod +x monitoring.sh
+* docker build -t monitoring_image .
+After finished build, run next command for start monitoring script:
+* docker run -it --rm monitoring /bin/bash -c "/logic.sh"
+Use the keys listed above for shows information about cpu or ram.
