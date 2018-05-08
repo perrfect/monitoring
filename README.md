@@ -15,10 +15,10 @@ When use keys see # DESCRIPTION
 * --memory
     * shows information about use memory and swap resources
 
-# Create Docker image
+# Create Docker image:
 
 * mkdir monitoring
-vi Docerfile
+* vi Docerfile
 ```
 FROM ubuntu:17.10
 MAINTAINER your_email@example.com
